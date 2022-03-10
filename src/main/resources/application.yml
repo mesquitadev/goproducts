@@ -1,0 +1,17 @@
+server:
+  port: 5001
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/goproducts
+    username: root
+    password: toor
+  jpa:
+    show-sql: true
+    hibernate:
+      properties:
+          format_sql: true
+      ddl-auto: update
+logging:
+  level:
+      com:
+        mesquitadev: DEBUG
