@@ -23,6 +23,8 @@ public class Product {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    private Long amount;
+
     private BigDecimal price;
 
 }

@@ -17,5 +17,8 @@ public class ProductUpdate {
     @Size(min=4, max=50)
     private String description;
 
+    @Size(min=1)
+    private Long amount;
+
     private BigDecimal price;
 }
