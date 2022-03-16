@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
@@ -13,7 +14,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product {
+public class Product implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,9 +26,11 @@ public class Product {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    private Long amount;
+    private String imageURL;
 
     private BigDecimal price;
+
+    private Long quantity;
 
 }
 

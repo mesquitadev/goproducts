@@ -39,6 +39,7 @@ public class ProductController {
     public ResponseEntity<ProductResponse> save(@RequestBody @Valid ProductPersist productPersist) {
         Product product = IProductConverter.productConverter.persistToEntity(productPersist);
         product = productService.save(product);
+
         return ResponseEntity.ok(IProductConverter.productConverter.entityToResponse(product));
     }
 

@@ -18,9 +18,12 @@ public class ProductPersist {
     @Size(min=4, max=50)
     private String description;
 
-    @NotBlank(message = "O CAMPO QUANTIDADE NÃO PODE SER VAZIO")
-    @Size(min=1)
-    private Long amount;
+    @NotBlank
+    @Size(min=4, max=200)
+    private String imageURL;
+
+    @NotNull
+    private Long quantity;
 
     @NotNull(message = "O CAMPO PREÇO NÃO PODE SER VAZIO")
     private BigDecimal price;
