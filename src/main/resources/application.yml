@@ -2,9 +2,9 @@ server:
   port: 5001
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/goproducts
-    username: root
-    password: toor
+    url: jdbc:postgresql://localhost:5432/positivoinvestimentos
+    username: postgres
+    password: postgres
   jpa:
     show-sql: true
     hibernate:
